@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class AverageSubArray {
 
     /**
-     * Sliding Window.
+     * Sliding Window -- Easy.
      * Keep the sum of k - 1 elements, everytime move forward,
      * we add the next end index element value and
      * minus the previous start index element value.
