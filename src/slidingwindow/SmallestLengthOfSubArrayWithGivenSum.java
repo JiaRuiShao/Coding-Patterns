@@ -5,7 +5,7 @@
 
 package slidingwindow;
 
-public class SamllestSubArray {
+public class SmallestLengthOfSubArrayWithGivenSum {
 
     /**
      * Sliding Window -- Easy.
@@ -15,7 +15,7 @@ public class SamllestSubArray {
      * @param s int value
      * @return the smallest subarray length whose sum >= S; 0 if sum of all elements < S
      */
-    public int findSmallestLengthOfSubArray(int[] arr, int s) {
+    public int findLength(int[] arr, int s) {
         int startIdx = 0;
         int windowSum = 0;
         int minArrayLength = Integer.MAX_VALUE;
@@ -32,13 +32,13 @@ public class SamllestSubArray {
     }
 
     public static void main(String[] args) {
-        SamllestSubArray sw = new SamllestSubArray();
+        SmallestLengthOfSubArrayWithGivenSum sw = new SmallestLengthOfSubArrayWithGivenSum();
         int[] array = new int[]{2, 1, 5, 2, 3, 2};
-        System.out.println(sw.findSmallestLengthOfSubArray(array, 7));
+        System.out.println(sw.findLength(array, 7));
         array = new int[]{2, 1, 5, 2, 8};
-        System.out.println(sw.findSmallestLengthOfSubArray(array, 7));
+        System.out.println(sw.findLength(array, 7));
         array = new int[]{3, 4, 1, 1, 6};
-        System.out.println(sw.findSmallestLengthOfSubArray(array, 8));
+        System.out.println(sw.findLength(array, 8));
     }
 
 }

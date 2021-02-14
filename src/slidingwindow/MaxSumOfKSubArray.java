@@ -3,7 +3,7 @@
 
 package slidingwindow;
 
-public class MaxSubArray {
+public class MaxSumOfKSubArray {
 
     /**
      * Sliding window -- Easy.
@@ -14,7 +14,7 @@ public class MaxSubArray {
      * @param k k elements subarray
      * @return the max sum value of k elements
      */
-    public int findMaxSumOfKSubArray(int[] arr, int k) {
+    public int findLength(int[] arr, int k) {
         int startIdx = 0;
         int maxSum = -1, windowSum = 0; // b/c the elements in arr is all positive numbers
         // or else we'll have to use Integer.MIN_VALUE
@@ -30,11 +30,11 @@ public class MaxSubArray {
     }
 
     public static void main(String[] args) {
-        MaxSubArray sw = new MaxSubArray();
+        MaxSumOfKSubArray sw = new MaxSumOfKSubArray();
         int[] array = new int[]{2, 1, 5, 1, 3, 2};
-        System.out.println(sw.findMaxSumOfKSubArray(array, 3));
+        System.out.println(sw.findLength(array, 3));
         array = new int[]{2, 3, 4, 1, 5};
-        System.out.println(sw.findMaxSumOfKSubArray(array, 2));
+        System.out.println(sw.findLength(array, 2));
     }
 
 }
