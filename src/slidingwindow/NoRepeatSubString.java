@@ -21,12 +21,21 @@ public class NoRepeatSubString {
      * @return max subarray length that only contains unique characters
      */
     public int findLength(String str) {
+
+        // corner case
+        if (str == null || str.length() == 0) {
+            return 0;
+        }
+
         int startIdx = 0, maxLength = 0;
         Map<Character, Integer> map = new HashMap<>();
         for (int endIdx = 0; endIdx < str.length(); endIdx++) {
+            // when we get a repeating character, shrink the sliding window to
+            // ensure that we only have distinct characters in the sliding window
             if (map.containsKey(str.charAt(endIdx))) {
                 startIdx = Math.max(startIdx, map.get(str.charAt(endIdx)) + 1);
             }
+            // use the hashmap to remember the last index of each character we've processed
             map.put(str.charAt(endIdx), endIdx);
             maxLength = Math.max(maxLength, endIdx - startIdx + 1);
         }
@@ -36,7 +45,7 @@ public class NoRepeatSubString {
     public static void main(String[] args) {
         NoRepeatSubString sw = new NoRepeatSubString();
         System.out.println("Length of the longest substring: " + sw.findLength("aabbac")); // 3
-        System.out.println("Length of the longest substring: " + sw.findLength("aabadef")); // 5
+            System.out.println("Length of the longest substring: " + sw.findLength("aabadef")); // 5
         System.out.println("Length of the longest substring: " + sw.findLength("abccde")); // 3
     }
 
