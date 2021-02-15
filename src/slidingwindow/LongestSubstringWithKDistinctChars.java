@@ -27,6 +27,7 @@ public class LongestSubstringWithKDistinctChars {
         int freq;
         int startIdx = 0;
         int maxStrLength = 0;
+
         for (int endIdx = 0; endIdx < str.length(); endIdx++) {
             freq = map.getOrDefault(str.charAt(endIdx), 0);
             // returns the key value if key exists, else return the default value 0
