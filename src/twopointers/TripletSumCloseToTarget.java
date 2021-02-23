@@ -14,7 +14,7 @@ public class TripletSumCloseToTarget {
      * TC: O(nlogn + n^2) -> O(n^2)
      * SC: O(n)
      *
-     * @param arr    the input Integer arr
+     * @param arr    the input int arr
      * @param target the target sum
      * @return null if there's no valid answer, the smallest sum of the triplet among the triplets
      * whose sum is the closest to the target sum.
