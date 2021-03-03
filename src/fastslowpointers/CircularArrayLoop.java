@@ -100,7 +100,7 @@ public class CircularArrayLoop {
             if (nextIdx == -1 || nextIdx(arr, nextNextIdx) == -1) return false;
             nextNextIdx = nextIdx(arr, nextIdx(arr, nextNextIdx));
             if (nextNextIdx == -1) return false;
-            if (nextIdx == nextNextIdx) return nextIdx == idx;
+            if (nextIdx == nextNextIdx) return true;
         }
     }
 
