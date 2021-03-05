@@ -13,8 +13,8 @@ public class IntervalsIntersection {
     /**
      * Intervals Intersection -- Medium.
      *
-     * TC: O(n)
-     * SC: O(n)
+     * TC: O(n + m) where n and m are interval# in the input arrays respectively
+     * SC: O(n + m)
      *
      * @param arr1 1st given interval
      * @param arr2 2nd given interval
