@@ -34,6 +34,15 @@ class EmployeeInterval {
 };
 
 public class EmployeeFreeTime {
+
+    /**
+     * Merge Intervals -- Practice Problem.
+     *
+     * TC: O(nlogk) where n is interval# and k is employee#
+     * SC: O(k)
+     * @param schedule
+     * @return
+     */
     public static List<Interval> findEmployeeFreeTime(List<List<Interval>> schedule) {
         List<Interval> result = new ArrayList<>();
         // PriorityQueue to store one interval from each employee
